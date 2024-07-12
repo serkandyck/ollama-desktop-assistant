@@ -4,6 +4,9 @@ import "./globals.css";
 import { Inter as FontSans } from "next/font/google"
 
 import { cn } from "@/lib/utils"
+
+import { OnboardingWrapper } from '@/components/ui/OnboardingWrapper'
+
  
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -28,7 +31,10 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
         )}>
-          {children}
+          <OnboardingWrapper>
+            {children}
+          </OnboardingWrapper>
+          
       </body>
     </html>
   );
