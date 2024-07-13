@@ -56,10 +56,12 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "width": 1280,
+        "height": 720,
+        "minWidth": 800,
+        "minHeight": 600,
         "resizable": true,
-        "title": "ollamaDesktop",
-        "width": 800
+        "title": "ollamaDesktop"
       }
     ]
   }

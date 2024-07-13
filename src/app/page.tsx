@@ -1,3 +1,7 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+import SetupWizard from "./SetupWizard"
 import {
   Bird,
   Book,
@@ -43,6 +47,24 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 export default function Home() {
+  const [showSetup, setShowSetup] = useState(false)
+
+  useEffect(() => {
+    const isSetupComplete = localStorage.getItem('isSetupComplete')
+    if (!isSetupComplete) {
+      setShowSetup(true)
+    }
+  }, [])
+
+  const completeSetup = () => {
+    localStorage.setItem('isSetupComplete', 'true')
+    setShowSetup(false)
+  }
+
+  if (showSetup) {
+    return <SetupWizard onComplete={completeSetup} />
+  }
+  
   return (
     <div className="grid h-screen w-full pl-[53px]">
       <aside className="inset-y fixed  left-0 z-20 flex h-full flex-col border-r">

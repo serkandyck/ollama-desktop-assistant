@@ -33,7 +33,7 @@ export function OnboardingDialog() {
           <p>Burada uygulamanızın özelliklerini tanıtabilirsiniz.</p>
         </div>
         <DialogFooter>
-          <Button onClick={completeOnboarding}>Onboarding'i Tamamla</Button>
+          <Button onClick={completeOnboarding}>Onboarding Tamamla</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
